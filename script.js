@@ -18,7 +18,7 @@ const calendarData = [
         events: [
             { type: 'primary', top: '45%', left: '52%', dateStr: "7", title: "Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership },
             { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "PCM", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting },
-            { type: 'range', top: '70%', left: '30%', width: '220px', dateStr: "15-30", title: "Installation Starts", fullDate: "15th June Phase", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration }
+            { type: 'range', top: '70%', left: '30%', width: '280px', dateStr: "15-30", title: "Installation Starts", fullDate: "15th June Phase", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration }
         ]
     },
     {
