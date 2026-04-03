@@ -193,6 +193,32 @@ function renderScene(idx, direction = 'none') {
     }
 }
 
+function formatDateStr(dateStr) {
+    if (!dateStr) return '';
+    if (/^\d+$/.test(dateStr)) {
+        return dateStr + '<sup>' + getOrdinal(parseInt(dateStr)) + '</sup>';
+    }
+    if (dateStr.includes('-')) {
+        return dateStr.split('-').map(p => {
+            const num = parseInt(p.trim());
+            return !isNaN(num) ? num + '<sup>' + getOrdinal(num) + '</sup>' : p;
+        }).join('-');
+    }
+    if (dateStr.includes('/')) {
+        return dateStr.split('/').map(p => {
+            const num = parseInt(p.trim());
+            return !isNaN(num) ? num + '<sup>' + getOrdinal(num) + '</sup>' : p;
+        }).join('/');
+    }
+    return dateStr;
+}
+
+function getOrdinal(n) {
+    const s = ["th", "st", "nd", "rd"];
+    const v = n % 100;
+    return s[(v - 20) % 10] || s[v] || s[0];
+}
+
 function injectFloatingNodes(monthObj) {
     const cardEl = document.getElementById('month-card');
     cardEl.innerHTML = '';
@@ -208,11 +234,13 @@ function injectFloatingNodes(monthObj) {
         const innerTransform = evt.scale ? `transform: scale(${evt.scale});` : '';
         const delay = i * 150; // stagger effect
         
+        const formattedDate = formatDateStr(evt.dateStr);
+        
         cardEl.innerHTML += `
             <div class="event-pos ${evt.type}" 
                  style="top: ${evt.top}; left: ${evt.left}; transform: translate(-50%, -50%); ${widthStyle} animation-delay: ${delay}ms;">
                 <div class="event-node" style="${innerTransform}" onclick="openModal('${evt.fullDate}', '${evt.title}', '${safeDesc}', '${safeBg}')">
-                    <div class="event-date">${evt.dateStr}</div>
+                    <div class="event-date">${formattedDate}</div>
                     <div class="event-title">${evt.title}</div>
                 </div>
             </div>
@@ -296,6 +324,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('wheel', (e) => {
         if(currentState === 'hero' && e.deltaY > 0) {
             enterCalendar();
+        } else if(currentState === 'calendar' && e.deltaY < 0 && !isModalOpen && !document.getElementById('month-selector-sheet').classList.contains('active')) {
+            goToHero();
         }
     });
 
@@ -307,13 +337,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    document.getElementById('back-to-hero').addEventListener('click', () => {
+    let calendarTouchStartY = 0;
+    document.getElementById('calendar').addEventListener('touchstart', e => calendarTouchStartY = e.touches[0].clientY, {passive:true});
+    document.getElementById('calendar').addEventListener('touchend', e => {
+        if(isModalOpen || document.getElementById('month-selector-sheet').classList.contains('active') || currentState === 'hero') return;
+        if(e.changedTouches[0].clientY - calendarTouchStartY > 50) {
+            goToHero();
+        }
+    });
+
+    function goToHero() {
+        if(currentState === 'hero') return;
+        currentState = 'hero';
         document.getElementById('calendar').classList.remove('active-state');
         document.getElementById('calendar').classList.add('hidden-state');
         document.getElementById('hero').classList.remove('hidden-state');
         document.getElementById('hero').classList.add('active-state');
-        currentState = 'hero';
-    });
+    }
 
     // Bind Controls
     document.getElementById('next-month').addEventListener('click', handleNext);
