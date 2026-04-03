@@ -15,11 +15,11 @@
     <!-- Cinematic Particles Background (covers entire experience) -->
     <canvas id="particles-canvas"></canvas>
 
-    <!-- Continuous Scroll Container -->
+    <!-- Continuous Container -->
     <main id="app-container">
 
         <!-- 1. HERO SECTION -->
-        <section id="hero" class="hero-section">
+        <section id="hero" class="hero-section active-state">
             <div class="hero-glow pink"></div>
             <div class="hero-glow purple"></div>
             <div class="hero-glow blue"></div>
@@ -28,23 +28,21 @@
                 <h1 class="hero-title" id="slogan">
                     <span class="word">PASSION</span><br>
                     <span class="word gradient">IGNITES</span><br>
-                    <span class="word">PURPOSE</span>
+                    <span class="word glow">PURPOSE!</span>
                 </h1>
-                <p class="hero-subtitle">A year to empower, engage, and elevate every club.</p>
+                <p class="hero-subtitle">A dimensional year to empower, engage, and elevate every club.</p>
             </div>
 
             <div class="scroll-indicator">
                 <div class="mouse"><div class="wheel"></div></div>
-                <span>Scroll to Explore</span>
+                <span>Scroll to Enter Dimension</span>
             </div>
         </section>
 
-        <!-- 2. PREMIUM INTERACTIVE CALENDAR SECTION -->
-        <section id="calendar" class="calendar-section">
-            <div class="calendar-header">
-                <h2>The Journey</h2>
-            </div>
-
+        <!-- 2. PREMIUM INTERACTIVE SPACE SECTION -->
+        <section id="calendar" class="calendar-section hidden-state">
+            <div id="ambient-glow" class="mid-layer-glow"></div>
+            
             <div class="calendar-nav-bar">
                 <button id="prev-month" class="nav-btn">&larr;</button>
                 <div class="month-title-container" id="open-month-selector">
@@ -54,10 +52,14 @@
             </div>
 
             <div class="scene-3d">
-                <div class="month-card" id="month-card">
-                    <!-- Events will be mapped here as staggered floating orbs mathematically -->
+                <div id="scene-scaler">
+                    <div class="month-scene" id="month-card">
+                        <!-- Events will be mapped here as staggered floating orbs mathematically -->
+                    </div>
                 </div>
             </div>
+            
+            <button id="back-to-hero" class="back-btn">&uarr; Back to Entry</button>
         </section>
     </main>
 
@@ -92,6 +94,11 @@
             </div>
         </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="cyber-footer">
+        <p>Built with passion by <a href="https://www.linkedin.com/in/veman-chippa" target="_blank" rel="noopener noreferrer">Iveman</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

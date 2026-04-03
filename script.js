@@ -16,84 +16,82 @@ const calendarData = [
         month: "June 2026",
         color: "#00C6FF", // Blue
         events: [
-            { isPrimary: true, dateStr: "7", title: "Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership },
-            { isPrimary: false, dateStr: "28", title: "PCM", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting },
-            { isPrimary: false, dateStr: "15-30", title: "Installation Starts", fullDate: "15th June Phase", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration }
+            { type: 'primary', top: '45%', left: '52%', dateStr: "7", title: "Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership },
+            { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "PCM", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting },
+            { type: 'range', top: '70%', left: '30%', width: '220px', dateStr: "15-30", title: "Installation Starts", fullDate: "15th June Phase", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration }
         ]
     },
     {
         month: "July 2026",
         color: "#7B2FF7", // Purple
         events: [
-            { isPrimary: true, dateStr: "1-31", title: "ZC Visits Active", fullDate: "Ongoing July", desc: "Zone-level engagement to strengthen club connections.", bg: bgImages.fellowship },
-            { isPrimary: false, dateStr: "1-31", title: "Installation Phase", fullDate: "Ongoing July", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration }
+            { type: 'range', top: '50%', left: '50%', width: '260px', dateStr: "1-31", title: "ZC Visits Active", fullDate: "Ongoing July", desc: "Zone-level engagement to strengthen club connections.", bg: bgImages.fellowship }
         ]
     },
     {
         month: "August 2026",
         color: "#FF4D8D", // Pink
         events: [
-            { isPrimary: true, dateStr: "16", title: "District Installation", fullDate: "16th August 2026", desc: "The official installation ceremony of the district.", bg: bgImages.celebration },
-            { isPrimary: false, dateStr: "1-15", title: "ZC Visits End", fullDate: "1-15 August", desc: "Concluding zone-level engagement.", bg: bgImages.fellowship }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "16", title: "Installation", fullDate: "16th August 2026", desc: "The official installation ceremony of the district.", bg: bgImages.celebration }
         ]
     },
     {
         month: "September 2026",
         color: "#00C6FF",
         events: [
-            { isPrimary: true, dateStr: "25", title: "First Council Meet", fullDate: "25th September 2026", desc: "Review, alignment, and strategic direction setting.", bg: bgImages.meeting }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "25", title: "Council Meet", fullDate: "25th September 2026", desc: "Review, alignment, and strategic direction setting.", bg: bgImages.meeting }
         ]
     },
     {
         month: "October 2026",
         color: "#FF4D8D",
         events: [
-            { isPrimary: true, dateStr: "4", title: "Umang", fullDate: "4th October 2026", desc: "A celebration of energy, culture, and unity.", bg: bgImages.celebration },
-            { isPrimary: false, dateStr: "10", title: "Service Finale", fullDate: "10th October 2026", desc: "Closing the service week with impact and recognition.", bg: bgImages.leadership }
+            { type: 'primary', top: '45%', left: '45%', dateStr: "4", title: "Umang", fullDate: "4th October 2026", desc: "A celebration of energy, culture, and unity.", bg: bgImages.celebration },
+            { type: 'secondary', top: '65%', left: '65%', dateStr: "10", title: "Service Finale", fullDate: "10th October 2026", desc: "Closing the service week with impact and recognition.", bg: bgImages.leadership }
         ]
     },
     {
         month: "November 2026",
         color: "#7B2FF7",
         events: [
-            { isPrimary: true, dateStr: "1", title: "Fellowship 1", fullDate: "1st November 2026", desc: "Strengthening bonds through connection and fun.", bg: bgImages.fellowship }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "1", title: "Fellowship 1", fullDate: "1st November 2026", desc: "Strengthening bonds through connection and fun.", bg: bgImages.fellowship }
         ]
     },
     {
         month: "December 2026",
         color: "#00C6FF",
         events: [
-            { isPrimary: true, dateStr: "20", title: "Image Building", fullDate: "20th December 2026", desc: "Enhancing visibility and global collaboration.", bg: bgImages.leadership }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "20", title: "Image Building", fullDate: "20th December 2026", desc: "Enhancing visibility and global collaboration.", bg: bgImages.leadership }
         ]
     },
     {
         month: "January 2027",
         color: "#FF4D8D",
         events: [
-            { isPrimary: true, dateStr: "9-10", title: "LLI", fullDate: "9–10 January 2027", desc: "Leadership Learning Institute for future-ready leaders.", bg: bgImages.leadership },
-            { isPrimary: false, dateStr: "26", title: "Council Meet", fullDate: "26th January 2027", desc: "Mid-year evaluation and strategic refinement.", bg: bgImages.meeting },
-            { isPrimary: false, dateStr: "24/31", title: "Fellowship 2", fullDate: "24 or 31 January 2027", desc: "Another opportunity to connect and celebrate together.", bg: bgImages.fellowship }
+            { type: 'primary', top: '45%', left: '55%', dateStr: "9-10", title: "LLI", fullDate: "9–10 January 2027", desc: "Leadership Learning Institute for future-ready leaders.", bg: bgImages.leadership },
+            { type: 'secondary', top: '30%', left: '75%', dateStr: "26", title: "Council Meet", fullDate: "26th January 2027", desc: "Mid-year evaluation and strategic refinement.", bg: bgImages.meeting },
+            { type: 'secondary', top: '70%', left: '30%', dateStr: "24/31", title: "Fellowship", fullDate: "24 or 31 January 2027", desc: "Another opportunity to connect and celebrate together.", bg: bgImages.fellowship }
         ]
     },
     {
         month: "Feb/March 2027",
         color: "#7B2FF7",
         events: [
-            { isPrimary: true, dateStr: "DP", title: "DP Visits Phase", fullDate: "15 Feb – 31 March", desc: "Direct engagement with clubs to guide and support growth.", bg: bgImages.leadership }
+            { type: 'range', top: '50%', left: '50%', width: '280px', dateStr: "DP", title: "DP Visits", fullDate: "15 Feb – 31 March", desc: "Direct engagement with clubs to guide and support growth.", bg: bgImages.leadership }
         ]
     },
     {
         month: "April 2027",
         color: "#00C6FF",
         events: [
-            { isPrimary: true, dateStr: "4", title: "9th ADC", fullDate: "4th April 2027", desc: "The Annual District Conference — the biggest platform of the year.", bg: bgImages.celebration }
+            { type: 'primary', top: '50%', left: '50%', scale: 1.2, dateStr: "4", title: "ADC", fullDate: "4th April 2027", desc: "The Annual District Conference — the biggest platform of the year.", bg: bgImages.celebration }
         ]
     },
     {
         month: "May 2027",
         color: "#FF4D8D",
         events: [
-            { isPrimary: true, dateStr: "9", title: "Awards", fullDate: "9th May 2027", desc: "Celebrating excellence and achievements across the district.", bg: bgImages.celebration }
+            { type: 'primary', top: '50%', left: '50%', scale: 1.15, dateStr: "9", title: "Awards", fullDate: "9th May 2027", desc: "Celebrating excellence and achievements across the district.", bg: bgImages.celebration }
         ]
     }
 ];
@@ -101,6 +99,10 @@ const calendarData = [
 // === 2. STATE ===
 let currentIndex = 0;
 let isAnimating = false;
+let isModalOpen = false;
+let currentState = 'hero'; // 'hero' or 'calendar'
+let currentAnimTimeout = null;
+let currentRenderTimeout = null;
 
 // === 3. CANVAS PARTICLES EXPEREINCE ===
 function initCanvas() {
@@ -117,7 +119,10 @@ function initCanvas() {
         height = canvas.height = window.innerHeight;
     });
 
-    for(let i=0; i<100; i++) {
+    const isMobile = window.innerWidth < 768;
+    const numParticles = isMobile ? 40 : 100;
+
+    for(let i=0; i<numParticles; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
@@ -129,25 +134,24 @@ function initCanvas() {
     }
 
     function render() {
-        ctx.clearRect(0,0,width,height);
-        
-        // Add scroll-based parallax to particles
-        const scrollOffset = window.scrollY * 0.2;
-        
-        particles.forEach(p => {
-            p.x += p.vx;
-            p.y += p.vy;
+        if (!isModalOpen) {
+            ctx.clearRect(0,0,width,height);
             
-            // Loop vertical
-            if(p.y < -10) p.y = height + 10;
-            if(p.x < -10) p.x = width + 10;
-            if(p.x > width + 10) p.x = -10;
-            
-            ctx.beginPath();
-            ctx.arc(p.x, p.y - scrollOffset % height, p.r, 0, Math.PI * 2); // very simple parallax calculation
-            ctx.fillStyle = `rgba(255,255,255,${p.alpha})`;
-            ctx.fill();
-        });
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                
+                // Loop vertical
+                if(p.y < -10) p.y = height + 10;
+                if(p.x < -10) p.x = width + 10;
+                if(p.x > width + 10) p.x = -10;
+                
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); 
+                ctx.fillStyle = `rgba(255,255,255,${p.alpha})`;
+                ctx.fill();
+            });
+        }
         requestAnimationFrame(render);
     }
     render();
@@ -157,6 +161,10 @@ function initCanvas() {
 
 function renderScene(idx, direction = 'none') {
     if(idx < 0 || idx >= calendarData.length) return;
+    
+    // Safety against rapid clicking overlaps
+    if (currentAnimTimeout) clearTimeout(currentAnimTimeout);
+    if (currentRenderTimeout) clearTimeout(currentRenderTimeout);
     
     const monthObj = calendarData[idx];
     document.getElementById('current-month-display').innerText = monthObj.month;
@@ -169,14 +177,14 @@ function renderScene(idx, direction = 'none') {
         const outClass = direction === 'next' ? 'is-flipping-out-left' : 'is-flipping-out-right';
         const inClass = direction === 'next' ? 'is-flipping-in-right' : 'is-flipping-in-left';
         
-        cardEl.className = `month-card ${outClass}`;
+        cardEl.className = `month-scene ${outClass}`;
         
-        setTimeout(() => {
+        currentAnimTimeout = setTimeout(() => {
             injectFloatingNodes(monthObj);
-            cardEl.className = `month-card ${inClass}`;
+            cardEl.className = `month-scene ${inClass}`;
             
-            setTimeout(() => {
-                cardEl.className = 'month-card'; // Cleanup classes after transition
+            currentRenderTimeout = setTimeout(() => {
+                cardEl.className = 'month-scene'; // Cleanup classes after transition
                 isAnimating = false;
             }, 600); // Wait for IN animation
         }, 600); // Wait for OUT animation
@@ -189,27 +197,24 @@ function injectFloatingNodes(monthObj) {
     const cardEl = document.getElementById('month-card');
     cardEl.innerHTML = '';
     
-    // Abstract spatial positioning to avoid grids
-    // We position primary in middle, secondaries around it
-    const positions = [
-        { top: '30%', left: '50%', transform: 'translate(-50%, -50%)' }, // Primary Slot
-        { top: '65%', left: '20%', transform: 'translate(0, 0)' }, // Sec Slot 1
-        { top: '20%', left: '70%', transform: 'translate(0, 0)' }  // Sec Slot 2
-    ];
-    
+    // Abstract spatial positioning using percentage coordinates
     monthObj.events.forEach((evt, i) => {
-        let pos = evt.isPrimary ? positions[0] : positions[(i % 2) + 1];
-        
         // Escape quotes
         const safeDesc = evt.desc.replace(/'/g, "\\'");
         const safeBg = evt.bg.replace(/'/g, "\\'");
         
+        // Conditional styles
+        const widthStyle = evt.width ? `width: ${evt.width};` : '';
+        const innerTransform = evt.scale ? `transform: scale(${evt.scale});` : '';
+        const delay = i * 150; // stagger effect
+        
         cardEl.innerHTML += `
-            <div class="event-node ${evt.isPrimary ? 'primary' : ''}" 
-                 style="top: ${pos.top}; left: ${pos.left}; transform: ${pos.transform}"
-                 onclick="openModal('${evt.fullDate}', '${evt.title}', '${safeDesc}', '${safeBg}')">
-                <div class="event-date">${evt.dateStr}</div>
-                <div class="event-title">${evt.title}</div>
+            <div class="event-pos ${evt.type}" 
+                 style="top: ${evt.top}; left: ${evt.left}; transform: translate(-50%, -50%); ${widthStyle} animation-delay: ${delay}ms;">
+                <div class="event-node" style="${innerTransform}" onclick="openModal('${evt.fullDate}', '${evt.title}', '${safeDesc}', '${safeBg}')">
+                    <div class="event-date">${evt.dateStr}</div>
+                    <div class="event-title">${evt.title}</div>
+                </div>
             </div>
         `;
     });
@@ -229,6 +234,9 @@ function handlePrev() {
 
 // === 5. MODAL LOGIC ===
 function openModal(date, title, desc, bg) {
+    isModalOpen = true;
+    document.querySelector('.scene-3d').classList.add('dimmed');
+    
     document.getElementById('modal-date').innerText = date;
     document.getElementById('modal-title').innerText = title;
     document.getElementById('modal-desc').innerText = desc;
@@ -241,6 +249,8 @@ function openModal(date, title, desc, bg) {
 }
 
 function closeModal() {
+    isModalOpen = false;
+    document.querySelector('.scene-3d').classList.remove('dimmed');
     document.getElementById('event-modal').classList.remove('active');
     document.removeEventListener('mousemove', modalParallax);
 }
@@ -282,6 +292,29 @@ document.addEventListener("DOMContentLoaded", () => {
     renderScene(currentIndex, 'none');
     buildMonthSelector();
     
+    // Hero to Calendar Transition binds
+    window.addEventListener('wheel', (e) => {
+        if(currentState === 'hero' && e.deltaY > 0) {
+            enterCalendar();
+        }
+    });
+
+    let enterTouchStart = 0;
+    document.getElementById('hero').addEventListener('touchstart', e => enterTouchStart = e.touches[0].clientY, {passive:true});
+    document.getElementById('hero').addEventListener('touchend', e => {
+        if(currentState === 'hero' && enterTouchStart - e.changedTouches[0].clientY > 50) {
+            enterCalendar();
+        }
+    });
+
+    document.getElementById('back-to-hero').addEventListener('click', () => {
+        document.getElementById('calendar').classList.remove('active-state');
+        document.getElementById('calendar').classList.add('hidden-state');
+        document.getElementById('hero').classList.remove('hidden-state');
+        document.getElementById('hero').classList.add('active-state');
+        currentState = 'hero';
+    });
+
     // Bind Controls
     document.getElementById('next-month').addEventListener('click', handleNext);
     document.getElementById('prev-month').addEventListener('click', handlePrev);
@@ -292,14 +325,28 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('month-selector-sheet').classList.add('active');
     });
     
-    // Handle Mobile Swipe
+    // Handle Mobile Swipe for Context
     let touchStartX = 0;
     const scene = document.querySelector('.scene-3d');
     scene.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX, {passive: true});
     scene.addEventListener('touchend', e => {
-        if(isAnimating) return;
+        if(isAnimating || isModalOpen || currentState === 'hero') return;
         let touchEndX = e.changedTouches[0].clientX;
         if(touchStartX - touchEndX > 50) handleNext(); // swipe left
         if(touchEndX - touchStartX > 50) handlePrev(); // swipe right
     });
 });
+
+function enterCalendar() {
+    if(currentState === 'calendar') return;
+    currentState = 'calendar';
+    
+    document.getElementById('hero').classList.remove('active-state');
+    document.getElementById('hero').classList.add('hidden-state');
+    
+    document.getElementById('calendar').classList.remove('hidden-state');
+    document.getElementById('calendar').classList.add('active-state');
+    
+    // Force re-render to trigger 3D animations nicely
+    renderScene(currentIndex, 'none');
+}
