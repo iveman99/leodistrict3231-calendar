@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Passion Ignites Purpose | Interactive Calendar</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cinematic Particles Background (covers entire experience) -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Continuous Scroll Container -->
+    <main id="app-container">
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-glow pink"></div>
+            <div class="hero-glow purple"></div>
+            <div class="hero-glow blue"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-title" id="slogan">
+                    <span class="word">PASSION</span><br>
+                    <span class="word gradient">IGNITES</span><br>
+                    <span class="word">PURPOSE</span>
+                </h1>
+                <p class="hero-subtitle">A year to empower, engage, and elevate every club.</p>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse"><div class="wheel"></div></div>
+                <span>Scroll to Explore</span>
+            </div>
+        </section>
+
+        <!-- 2. PREMIUM INTERACTIVE CALENDAR SECTION -->
+        <section id="calendar" class="calendar-section">
+            <div class="calendar-header">
+                <h2>The Journey</h2>
+            </div>
+
+            <div class="calendar-nav-bar">
+                <button id="prev-month" class="nav-btn">&larr;</button>
+                <div class="month-title-container" id="open-month-selector">
+                    <span id="current-month-display">June 2026</span>
+                </div>
+                <button id="next-month" class="nav-btn">&rarr;</button>
+            </div>
+
+            <div class="scene-3d">
+                <div class="month-card" id="month-card">
+                    <!-- Events will be mapped here as staggered floating orbs mathematically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FULLSCREEN EVENT MODAL -->
+    <div id="event-modal" class="fullscreen-modal hidden">
+        <div class="modal-bg-parallax" id="modal-image"></div>
+        <div class="modal-gradient-overlay"></div>
+        
+        <button class="close-modal" id="close-modal">&times;</button>
+        
+        <div class="modal-content">
+            <div class="modal-text-stagger">
+                <p class="modal-date" class="reveal-text" id="modal-date">--</p>
+            </div>
+            <div class="modal-text-stagger">
+                <h2 class="modal-title" class="reveal-text" id="modal-title">--</h2>
+            </div>
+            <div class="modal-text-stagger">
+                <p class="modal-desc" class="reveal-text" id="modal-desc">--</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JUMP TO MONTH SELECTOR -->
+    <div id="month-selector-sheet" class="bottom-sheet">
+        <div class="sheet-backdrop"></div>
+        <div class="sheet-content glass-panel">
+            <div class="drag-handle"></div>
+            <h3>Jump to Month</h3>
+            <div class="months-grid" id="months-grid">
+                <!-- Javascript builds grid -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
