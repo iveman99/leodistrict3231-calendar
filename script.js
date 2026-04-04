@@ -17,7 +17,6 @@ const calendarData = [
         color: "#00C6FF",
         events: [
             { type: 'primary', top: '45%', left: '52%', dateStr: "7", title: "PSTVP & GAT Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership, video: "Videos/Schooling.MOV" },
-            { type: 'secondary', top: '25%', left: '30%', dateStr: "15", title: "Presidents' Meet", fullDate: "15th June 2026", desc: "A gathering for club presidents.", bg: bgImages.meeting, video: "Videos/Presidents_Meet.MOV" },
             { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "Preliminary Council Meet", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting, video: "Videos/Preliminary_Council_Meet.MOV" }
         ]
     },
