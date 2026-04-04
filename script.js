@@ -14,29 +14,23 @@ const bgImages = {
 const calendarData = [
     {
         month: "June 2026",
-        color: "#00C6FF", // Blue
+        color: "#00C6FF",
         events: [
             { type: 'primary', top: '45%', left: '52%', dateStr: "7", title: "PSTVP & GAT Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership },
             { type: 'secondary', top: '25%', left: '30%', dateStr: "15", title: "Presidents' Meet", fullDate: "15th June 2026", desc: "A gathering for club presidents.", bg: bgImages.meeting },
-            { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "Preliminary Council Meet", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting },
-            { type: 'range', top: '70%', left: '30%', width: '280px', dateStr: "15-30", title: "Club Installations Start", fullDate: "15th June 2026 onwards", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration }
+            { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "Preliminary Council Meet", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting }
         ]
     },
     {
         month: "July 2026",
-        color: "#7B2FF7", // Purple
-        events: [
-            { type: 'range', top: '40%', left: '50%', width: '260px', dateStr: "1-31", title: "ZC & Sec Visits", fullDate: "Ongoing July", desc: "Zone Chairpersons & Secretary visits begin.", bg: bgImages.fellowship },
-            { type: 'range', top: '65%', left: '50%', width: '260px', dateStr: "1-31", title: "Club Installations", fullDate: "Ongoing July", desc: "Installations across the district continue.", bg: bgImages.celebration }
-        ]
+        color: "#7B2FF7",
+        events: []
     },
     {
         month: "August 2026",
-        color: "#FF4D8D", // Pink
+        color: "#FF4D8D",
         events: [
-            { type: 'primary', top: '50%', left: '50%', dateStr: "16", title: "District Installation", fullDate: "16th August 2026", desc: "The official installation ceremony of the district.", bg: bgImages.celebration },
-            { type: 'range', top: '25%', left: '50%', width: '260px', dateStr: "1-15", title: "ZC & Sec Visits End", fullDate: "Till 15th August", desc: "Zone Chairpersons & Secretary visits conclude.", bg: bgImages.fellowship },
-            { type: 'range', top: '75%', left: '50%', width: '260px', dateStr: "1-15", title: "Installations End", fullDate: "Till 15th August", desc: "Club installations conclude.", bg: bgImages.celebration }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "16", title: "District Installation", fullDate: "16th August 2026", desc: "The official installation ceremony of the district.", bg: bgImages.celebration }
         ]
     },
     {
@@ -50,7 +44,6 @@ const calendarData = [
         month: "October 2026",
         color: "#FF4D8D",
         events: [
-            { type: 'range', top: '25%', left: '50%', width: '260px', dateStr: "2-9", title: "October Service Week", fullDate: "2nd – 9th October 2026", desc: "A week dedicated to impactful service initiatives.", bg: bgImages.leadership },
             { type: 'primary', top: '55%', left: '40%', dateStr: "4", title: "UMANG", fullDate: "4th October 2026", desc: "A celebration of energy, culture, and unity.", bg: bgImages.celebration },
             { type: 'secondary', top: '70%', left: '60%', dateStr: "10", title: "Service Finale", fullDate: "10th October 2026", desc: "Closing the service week with impact and recognition.", bg: bgImages.leadership }
         ]
@@ -66,7 +59,7 @@ const calendarData = [
         month: "December 2026",
         color: "#00C6FF",
         events: [
-            { type: 'primary', top: '45%', left: '40%', dateStr: "6", title: "Multiple's Marathon", fullDate: "6th December 2026", desc: "Running together for a cause.", bg: bgImages.celebration },
+            { type: 'primary', top: '45%', left: '40%', dateStr: "6", title: "Multiple Marathon", fullDate: "6th December 2026", desc: "Running together for a cause.", bg: bgImages.celebration },
             { type: 'primary', top: '55%', left: '60%', dateStr: "20", title: "Image & Intl Day", fullDate: "20th December 2026", desc: "Image Building & International Day.", bg: bgImages.leadership }
         ]
     },
@@ -75,21 +68,23 @@ const calendarData = [
         color: "#FF4D8D",
         events: [
             { type: 'primary', top: '35%', left: '30%', dateStr: "9-10", title: "LLI", fullDate: "9–10 January 2027", desc: "Leadership Learning Institute for future-ready leaders.", bg: bgImages.leadership },
-            { type: 'range', top: '75%', left: '70%', width: '240px', dateStr: "22-24", title: "ISAAME Forum", fullDate: "22nd–24th January 2027 (Goa)", desc: "Representing the district at the ISAAME Forum.", bg: bgImages.celebration },
             { type: 'secondary', top: '50%', left: '50%', dateStr: "26", title: "Second Council Meet", fullDate: "26th January 2027", desc: "Mid-year evaluation and strategic refinement.", bg: bgImages.meeting },
             { type: 'secondary', top: '25%', left: '70%', dateStr: "31", title: "Fellowship 2", fullDate: "31st January 2027", desc: "Another opportunity to connect and celebrate together.", bg: bgImages.fellowship }
         ]
     },
     {
-        month: "Feb/March 2027",
+        month: "February 2027",
         color: "#7B2FF7",
-        events: [
-            { type: 'range', top: '50%', left: '50%', width: '280px', dateStr: "DP", title: "DP Visits", fullDate: "15 Feb – 31 March", desc: "Direct engagement with clubs to guide and support growth.", bg: bgImages.leadership }
-        ]
+        events: []
+    },
+    {
+        month: "March 2027",
+        color: "#00C6FF",
+        events: []
     },
     {
         month: "April 2027",
-        color: "#00C6FF",
+        color: "#7B2FF7",
         events: [
             { type: 'primary', top: '50%', left: '50%', scale: 1.2, dateStr: "4", title: "10th ADC", fullDate: "4th April 2027", desc: "10th Annual District Conference — the biggest platform of the year.", bg: bgImages.celebration }
         ]
@@ -98,11 +93,24 @@ const calendarData = [
         month: "May 2027",
         color: "#FF4D8D",
         events: [
-            { type: 'primary', top: '35%', left: '40%', scale: 1.15, dateStr: "9", title: "District Awards", fullDate: "9th May 2027", desc: "Celebrating excellence and achievements across the district.", bg: bgImages.celebration },
-            { type: 'range', top: '65%', left: '60%', width: '240px', dateStr: "28-30", title: "Multiple Convention", fullDate: "28th–30th May 2027", desc: "Annual Multiple Convention.", bg: bgImages.meeting }
+            { type: 'primary', top: '35%', left: '40%', scale: 1.15, dateStr: "9", title: "District Awards", fullDate: "9th May 2027", desc: "Celebrating excellence and achievements across the district.", bg: bgImages.celebration }
+        ]
+    },
+    {
+        month: "Annual Highlights",
+        type: "highlights",
+        color: "#FFD700",
+        events: [
+            { range: "15th June - 15th Aug 2026", title: "Club Installations", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration },
+            { range: "1st July - 15th Aug 2026", title: "ZC & Sec Visits", desc: "Zone Chairpersons & Secretary visits across the district.", bg: bgImages.fellowship },
+            { range: "2nd Oct - 9th Oct 2026", title: "October Service Week", desc: "A week dedicated to impactful service initiatives.", bg: bgImages.leadership },
+            { range: "22nd Jan - 24th Jan 2027", title: "ISAAME Forum (Goa)", desc: "Representing the district at the ISAAME Forum.", bg: bgImages.celebration },
+            { range: "15th Feb - 31st Mar 2027", title: "District Presidents' Visits", desc: "Direct engagement with clubs to guide and support growth.", bg: bgImages.leadership },
+            { range: "28th - 30th May 2027", title: "Multiple Convention", desc: "Annual Multiple Convention participation.", bg: bgImages.meeting }
         ]
     }
 ];
+
 
 // === 2. STATE ===
 let currentIndex = 0;
@@ -188,16 +196,16 @@ function renderScene(idx, direction = 'none') {
         cardEl.className = `month-scene ${outClass}`;
         
         currentAnimTimeout = setTimeout(() => {
-            injectFloatingNodes(monthObj);
+            renderMonthContent(monthObj); // Use new refactored function
             cardEl.className = `month-scene ${inClass}`;
             
             currentRenderTimeout = setTimeout(() => {
-                cardEl.className = 'month-scene'; // Cleanup classes after transition
+                cardEl.className = 'month-scene';
                 isAnimating = false;
-            }, 600); // Wait for IN animation
-        }, 600); // Wait for OUT animation
+            }, 600);
+        }, 600);
     } else {
-        injectFloatingNodes(monthObj);
+        renderMonthContent(monthObj);
     }
 }
 
@@ -227,33 +235,119 @@ function getOrdinal(n) {
     return s[(v - 20) % 10] || s[v] || s[0];
 }
 
-function injectFloatingNodes(monthObj) {
+function renderMonthContent(monthObj) {
     const cardEl = document.getElementById('month-card');
     cardEl.innerHTML = '';
     
-    // Abstract spatial positioning using percentage coordinates
+    if (monthObj.type === 'highlights') {
+        renderHighlights(monthObj, cardEl);
+    } else {
+        renderMonthlyGrid(monthObj, cardEl);
+    }
+}
+
+function renderMonthlyGrid(monthObj, container) {
+    const daysInMonth = getDaysInMonth(monthObj.month);
+    const startDay = getFirstWeekday(monthObj.month); // 0 = Sun
+    
+    // Create Grid Wrapper
+    const gridWrapper = document.createElement('div');
+    gridWrapper.className = 'calendar-grid';
+    
+    // Weekday Headers
+    const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    days.forEach(d => {
+        const h = document.createElement('div');
+        h.className = 'grid-header';
+        h.innerText = d;
+        gridWrapper.appendChild(h);
+    });
+    
+    // Empty Padding Days
+    for(let i=0; i<startDay; i++) {
+        const empty = document.createElement('div');
+        empty.className = 'grid-day empty';
+        gridWrapper.appendChild(empty);
+    }
+    
+    // Day Cells
+    for(let d=1; d<=daysInMonth; d++) {
+        const dayEl = document.createElement('div');
+        dayEl.className = 'grid-day';
+        
+        // Check for events on this day
+        const dayEvents = monthObj.events.filter(evt => {
+            // Handle range strings like "9-10" or single "7"
+            if (evt.dateStr.includes('-')) {
+                const [start, end] = evt.dateStr.split('-').map(Number);
+                return d >= start && d <= end;
+            }
+            return parseInt(evt.dateStr) === d;
+        });
+
+        const hasEvent = dayEvents.length > 0;
+        if (hasEvent) {
+            dayEl.classList.add('has-event');
+            const evt = dayEvents[0]; // Take first for display
+            
+            const safeDesc = evt.desc.replace(/'/g, "\\'");
+            const safeBg = evt.bg.replace(/'/g, "\\'");
+            
+            dayEl.onclick = () => openModal(evt.fullDate, evt.title, safeDesc, safeBg);
+            
+            dayEl.innerHTML = `
+                <div class="day-number">${d}</div>
+                <div class="day-event-title">${evt.title}</div>
+                <div class="event-glow"></div>
+            `;
+        } else {
+            dayEl.innerHTML = `<div class="day-number">${d}</div>`;
+        }
+        
+        gridWrapper.appendChild(dayEl);
+    }
+    
+    container.appendChild(gridWrapper);
+}
+
+function renderHighlights(monthObj, container) {
+    const highlightsWrapper = document.createElement('div');
+    highlightsWrapper.className = 'highlights-container';
+    
     monthObj.events.forEach((evt, i) => {
-        // Escape quotes
+        const delay = i * 100;
+        const card = document.createElement('div');
+        card.className = 'highlight-card';
+        card.style.animationDelay = `${delay}ms`;
+        
         const safeDesc = evt.desc.replace(/'/g, "\\'");
         const safeBg = evt.bg.replace(/'/g, "\\'");
         
-        // Conditional styles
-        const widthStyle = evt.width ? `width: ${evt.width};` : '';
-        const innerTransform = evt.scale ? `transform: scale(${evt.scale});` : '';
-        const delay = i * 150; // stagger effect
+        card.onclick = () => openModal(evt.range, evt.title, safeDesc, safeBg);
         
-        const formattedDate = formatDateStr(evt.dateStr);
-        
-        cardEl.innerHTML += `
-            <div class="event-pos ${evt.type}" 
-                 style="top: ${evt.top}; left: ${evt.left}; transform: translate(-50%, -50%); ${widthStyle} animation-delay: ${delay}ms;">
-                <div class="event-node" style="${innerTransform}" onclick="openModal('${evt.fullDate}', '${evt.title}', '${safeDesc}', '${safeBg}')">
-                    <div class="event-date">${formattedDate}</div>
-                    <div class="event-title">${evt.title}</div>
-                </div>
-            </div>
+        card.innerHTML = `
+            <div class="highlight-range">${evt.range}</div>
+            <div class="highlight-title">${evt.title}</div>
+            <div class="highlight-arrow">VIEW DETAILS &rarr;</div>
         `;
+        highlightsWrapper.appendChild(card);
     });
+    
+    container.appendChild(highlightsWrapper);
+}
+
+function getDaysInMonth(monthName) {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const [name, year] = monthName.split(' ');
+    const monthIndex = months.indexOf(name);
+    return new Date(year, monthIndex + 1, 0).getDate();
+}
+
+function getFirstWeekday(monthName) {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const [name, year] = monthName.split(' ');
+    const monthIndex = months.indexOf(name);
+    return new Date(year, monthIndex, 1).getDay();
 }
 
 function handleNext() {
@@ -396,5 +490,5 @@ function enterCalendar() {
     document.getElementById('calendar').classList.add('active-state');
     
     // Force re-render to trigger 3D animations nicely
-    renderScene(currentIndex, 'none');
+    renderMonthContent(calendarData[currentIndex]);
 }

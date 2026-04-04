@@ -605,9 +605,194 @@ body {
     }
 }
 
-.hidden-state .scroll-indicator {
-    opacity: 0 !important;
-    display: none !important;
-    visibility: hidden !important;
-    animation: none !important;
+/* === CALENDAR GRID SYSTEM === */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 100px auto;
+    perspective: 1000px;
+}
+
+.grid-header {
+    text-align: center;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.grid-day {
+    aspect-ratio: 1/1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 12px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.grid-day.empty {
+    background: none;
+    border: none;
+}
+
+.grid-day .day-number {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.3);
+    transition: color 0.3s;
+}
+
+/* Event Highlights */
+.grid-day.has-event {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--month-glow);
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: scale(1.1) translateZ(20px);
+    z-index: 5;
+    animation: pulseEvent 4s infinite alternate ease-in-out;
+}
+
+.grid-day.has-event:hover {
+    transform: scale(1.2) translateZ(40px) !important;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px var(--month-glow);
+}
+
+.grid-day.has-event .day-number {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.day-event-title {
+    margin-top: auto;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--month-glow);
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.event-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: var(--month-glow);
+    filter: blur(25px);
+    opacity: 0.1;
+    z-index: -1;
+    transition: opacity 0.3s;
+}
+
+.grid-day.has-event:hover .event-glow {
+    opacity: 0.3;
+}
+
+@keyframes pulseEvent {
+    0% { box-shadow: 0 0 15px rgba(255,255,255,0); }
+    100% { box-shadow: 0 0 30px var(--month-glow), inset 0 0 15px var(--month-glow); }
+}
+
+/* === ANNUAL HIGHLIGHTS SECTION === */
+.highlights-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 85%;
+    max-width: 1200px;
+    margin: 120px auto;
+}
+
+.highlight-card {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 2.5rem;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardEnter 0.8s forwards;
+}
+
+@keyframes cardEnter {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.highlight-card:hover {
+    transform: scale(1.05) translateY(-10px);
+    background: rgba(30, 30, 30, 0.6);
+    border-color: var(--month-glow);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 20px rgba(255,215,0,0.2);
+}
+
+.highlight-range {
+    color: #FFD700;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.highlight-title {
+    font-family: var(--font-head);
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.highlight-arrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.highlight-card:hover .highlight-arrow {
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Responsive Grid */
+@media(max-width: 1024px) {
+    .highlights-container { grid-template-columns: repeat(2, 1fr); }
+    .calendar-grid { width: 95%; gap: 10px; }
+}
+
+@media(max-width: 768px) {
+    .highlights-container { grid-template-columns: 1fr; margin-top: 80px; }
+    .calendar-grid { 
+        width: 100%; 
+        gap: 5px; 
+        margin-top: 80px;
+        transform: scale(0.9);
+    }
+    .grid-day .day-number { font-size: 0.9rem; }
+    .grid-day.has-event .day-number { font-size: 1.8rem; }
+    .day-event-title { font-size: 0.6rem; }
 }
