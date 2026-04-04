@@ -17,8 +17,8 @@ const calendarData = [
         color: "#00C6FF",
         events: [
             { type: 'primary', top: '45%', left: '52%', dateStr: "7", title: "PSTVP & GAT Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership, video: "Videos/Schooling.MOV" },
-            { type: 'secondary', top: '25%', left: '30%', dateStr: "15", title: "Presidents' Meet", fullDate: "15th June 2026", desc: "A gathering for club presidents.", bg: bgImages.meeting },
-            { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "Preliminary Council Meet", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting }
+            { type: 'secondary', top: '25%', left: '30%', dateStr: "15", title: "Presidents' Meet", fullDate: "15th June 2026", desc: "A gathering for club presidents.", bg: bgImages.meeting, video: "Videos/Presidents_Meet.MOV" },
+            { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "Preliminary Council Meet", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting, video: "Videos/Preliminary_Council_Meet.MOV" }
         ]
     },
     {
@@ -30,46 +30,46 @@ const calendarData = [
         month: "August 2026",
         color: "#FF4D8D",
         events: [
-            { type: 'primary', top: '50%', left: '50%', dateStr: "16", title: "District Installation", fullDate: "16th August 2026", desc: "The official installation ceremony of the district.", bg: bgImages.celebration }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "16", title: "District Installation", fullDate: "16th August 2026", desc: "The official installation ceremony of the district.", bg: bgImages.celebration, video: "Videos/District_Installation.MOV" }
         ]
     },
     {
         month: "September 2026",
         color: "#00C6FF",
         events: [
-            { type: 'primary', top: '50%', left: '50%', dateStr: "25", title: "First Council Meet", fullDate: "25th September 2026", desc: "Review, alignment, and strategic direction setting.", bg: bgImages.meeting }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "25", title: "First Council Meet", fullDate: "25th September 2026", desc: "Review, alignment, and strategic direction setting.", bg: bgImages.meeting, video: "Videos/First_Council_Meet.MOV" }
         ]
     },
     {
         month: "October 2026",
         color: "#FF4D8D",
         events: [
-            { type: 'primary', top: '55%', left: '40%', dateStr: "4", title: "UMANG", fullDate: "4th October 2026", desc: "A celebration of energy, culture, and unity.", bg: bgImages.celebration },
-            { type: 'secondary', top: '70%', left: '60%', dateStr: "10", title: "October Service Week Finale Day", fullDate: "10th October 2026", desc: "Closing the service week with impact and recognition.", bg: bgImages.leadership }
+            { type: 'primary', top: '55%', left: '40%', dateStr: "4", title: "UMANG", fullDate: "4th October 2026", desc: "A celebration of energy, culture, and unity.", bg: bgImages.celebration, video: "Videos/UMANG.MOV" },
+            { type: 'secondary', top: '70%', left: '60%', dateStr: "10", title: "October Service Week Finale Day", fullDate: "10th October 2026", desc: "Closing the service week with impact and recognition.", bg: bgImages.leadership, video: "Videos/October_Service_Week_Finale.MOV" }
         ]
     },
     {
         month: "November 2026",
         color: "#7B2FF7",
         events: [
-            { type: 'primary', top: '50%', left: '50%', dateStr: "1", title: "Fellowship", fullDate: "1st November 2026", desc: "Strengthening bonds through connection and fun.", bg: bgImages.fellowship }
+            { type: 'primary', top: '50%', left: '50%', dateStr: "1", title: "Fellowship", fullDate: "1st November 2026", desc: "Strengthening bonds through connection and fun.", bg: bgImages.fellowship, video: "Videos/Fellowship_1.MOV" }
         ]
     },
     {
         month: "December 2026",
         color: "#00C6FF",
         events: [
-            { type: 'primary', top: '45%', left: '40%', dateStr: "6", title: "Multiple's Marathon", fullDate: "6th December 2026", desc: "Running together for a cause.", bg: bgImages.celebration },
-            { type: 'primary', top: '55%', left: '60%', dateStr: "20", title: "Image Building & International Day", fullDate: "20th December 2026", desc: "Showcasing our brand and celebrating our global connections.", bg: bgImages.leadership }
+            { type: 'primary', top: '45%', left: '40%', dateStr: "6", title: "Multiple's Marathon", fullDate: "6th December 2026", desc: "Running together for a cause.", bg: bgImages.celebration, video: "Videos/Multiples_Marathon.MOV" },
+            { type: 'primary', top: '55%', left: '60%', dateStr: "20", title: "Image Building & International Day", fullDate: "20th December 2026", desc: "Showcasing our brand and celebrating our global connections.", bg: bgImages.leadership, video: "Videos/Image_Building.MOV" }
         ]
     },
     {
         month: "January 2027",
         color: "#FF4D8D",
         events: [
-            { type: 'primary', top: '35%', left: '30%', dateStr: "9-10", title: "LLI", fullDate: "9–10 January 2027", desc: "Leadership Learning Institute for future-ready leaders.", bg: bgImages.leadership },
-            { type: 'secondary', top: '50%', left: '50%', dateStr: "26", title: "Second Council Meet", fullDate: "26th January 2027", desc: "Mid-year evaluation and strategic refinement.", bg: bgImages.meeting },
-            { type: 'secondary', top: '25%', left: '70%', dateStr: "31", title: "Fellowship 2", fullDate: "31st January 2027", desc: "Another opportunity to connect and celebrate together.", bg: bgImages.fellowship }
+            { type: 'primary', top: '35%', left: '30%', dateStr: "9-10", title: "LLI", fullDate: "9–10 January 2027", desc: "Leadership Learning Institute for future-ready leaders.", bg: bgImages.leadership, video: "Videos/LLI.MOV" },
+            { type: 'secondary', top: '50%', left: '50%', dateStr: "26", title: "Second Council Meet", fullDate: "26th January 2027", desc: "Mid-year evaluation and strategic refinement.", bg: bgImages.meeting, video: "Videos/Second_Council_Meet.MOV" },
+            { type: 'secondary', top: '25%', left: '70%', dateStr: "31", title: "Fellowship 2", fullDate: "31st January 2027", desc: "Another opportunity to connect and celebrate together.", bg: bgImages.fellowship, video: "Videos/Fellowship_2.MOV" }
         ]
     },
     {
@@ -86,14 +86,14 @@ const calendarData = [
         month: "April 2027",
         color: "#7B2FF7",
         events: [
-            { type: 'primary', top: '50%', left: '50%', scale: 1.2, dateStr: "4", title: "10th Annual District Conference", fullDate: "4th April 2027", desc: "The biggest platform of the year for recognition and growth.", bg: bgImages.celebration }
+            { type: 'primary', top: '50%', left: '50%', scale: 1.2, dateStr: "4", title: "10th Annual District Conference", fullDate: "4th April 2027", desc: "The biggest platform of the year for recognition and growth.", bg: bgImages.celebration, video: "Videos/District_Conference.MOV" }
         ]
     },
     {
         month: "May 2027",
         color: "#FF4D8D",
         events: [
-            { type: 'primary', top: '35%', left: '40%', scale: 1.15, dateStr: "9", title: "District Awards", fullDate: "9th May 2027", desc: "Celebrating excellence and achievements across the district.", bg: bgImages.celebration }
+            { type: 'primary', top: '35%', left: '40%', scale: 1.15, dateStr: "9", title: "District Awards", fullDate: "9th May 2027", desc: "Celebrating excellence and achievements across the district.", bg: bgImages.celebration, video: "Videos/District_Awards.MOV" }
         ]
     },
     {
@@ -101,12 +101,12 @@ const calendarData = [
         type: "highlights",
         color: "#FFD700",
         events: [
-            { range: "15th June - 15th Aug 2026", title: "Club Installations", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration },
-            { range: "1st July - 15th Aug 2026", title: "ZC & Sec Visits", desc: "Zone Chairpersons & Secretary visits across the district.", bg: bgImages.fellowship },
-            { range: "2nd Oct - 9th Oct 2026", title: "October Service Week", desc: "A week dedicated to impactful service initiatives.", bg: bgImages.leadership },
-            { range: "22nd Jan - 24th Jan 2027", title: "ISAAME Forum (Goa)", desc: "Representing the district at the ISAAME Forum.", bg: bgImages.celebration },
-            { range: "15th Feb - 31st Mar 2027", title: "District Presidents' Visits", desc: "Direct engagement with clubs to guide and support growth.", bg: bgImages.leadership },
-            { range: "28th - 30th May 2027", title: "Multiple Convention", desc: "Annual Multiple Convention participation.", bg: bgImages.meeting }
+            { range: "15th June - 15th Aug 2026", title: "Club Installations", desc: "Marking the beginning of leadership across the district.", bg: bgImages.celebration, video: "Videos/Club_Installations.MOV" },
+            { range: "1st July - 15th Aug 2026", title: "ZC & Sec Visits", desc: "Zone Chairpersons & Secretary visits across the district.", bg: bgImages.fellowship, video: "Videos/ZC_Visits.MOV" },
+            { range: "2nd Oct - 9th Oct 2026", title: "October Service Week", desc: "A week dedicated to impactful service initiatives.", bg: bgImages.leadership, video: "Videos/October_Service_Week.MOV" },
+            { range: "22nd Jan - 24th Jan 2027", title: "ISAAME Forum (Goa)", desc: "Representing the district at the ISAAME Forum.", bg: bgImages.celebration, video: "Videos/ISAAME_Forum.MOV" },
+            { range: "15th Feb - 31st Mar 2027", title: "District Presidents' Visits", desc: "Direct engagement with clubs to guide and support growth.", bg: bgImages.leadership, video: "Videos/Presidents_Visits.MOV" },
+            { range: "28th - 30th May 2027", title: "Multiple Convention", desc: "Annual Multiple Convention participation.", bg: bgImages.meeting, video: "Videos/Multiple_Convention.MOV" }
         ]
     }
 ];
