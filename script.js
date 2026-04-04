@@ -45,7 +45,7 @@ const calendarData = [
         color: "#FF4D8D",
         events: [
             { type: 'primary', top: '55%', left: '40%', dateStr: "4", title: "UMANG", fullDate: "4th October 2026", desc: "A celebration of energy, culture, and unity.", bg: bgImages.celebration },
-            { type: 'secondary', top: '70%', left: '60%', dateStr: "10", title: "Service Finale", fullDate: "10th October 2026", desc: "Closing the service week with impact and recognition.", bg: bgImages.leadership }
+            { type: 'secondary', top: '70%', left: '60%', dateStr: "10", title: "October Service Week Finale Day", fullDate: "10th October 2026", desc: "Closing the service week with impact and recognition.", bg: bgImages.leadership }
         ]
     },
     {
@@ -59,8 +59,8 @@ const calendarData = [
         month: "December 2026",
         color: "#00C6FF",
         events: [
-            { type: 'primary', top: '45%', left: '40%', dateStr: "6", title: "Multiple Marathon", fullDate: "6th December 2026", desc: "Running together for a cause.", bg: bgImages.celebration },
-            { type: 'primary', top: '55%', left: '60%', dateStr: "20", title: "Image & Intl Day", fullDate: "20th December 2026", desc: "Image Building & International Day.", bg: bgImages.leadership }
+            { type: 'primary', top: '45%', left: '40%', dateStr: "6", title: "Multiple's Marathon", fullDate: "6th December 2026", desc: "Running together for a cause.", bg: bgImages.celebration },
+            { type: 'primary', top: '55%', left: '60%', dateStr: "20", title: "Image Building & International Day", fullDate: "20th December 2026", desc: "Showcasing our brand and celebrating our global connections.", bg: bgImages.leadership }
         ]
     },
     {
@@ -86,7 +86,7 @@ const calendarData = [
         month: "April 2027",
         color: "#7B2FF7",
         events: [
-            { type: 'primary', top: '50%', left: '50%', scale: 1.2, dateStr: "4", title: "10th ADC", fullDate: "4th April 2027", desc: "10th Annual District Conference — the biggest platform of the year.", bg: bgImages.celebration }
+            { type: 'primary', top: '50%', left: '50%', scale: 1.2, dateStr: "4", title: "10th Annual District Conference", fullDate: "4th April 2027", desc: "The biggest platform of the year for recognition and growth.", bg: bgImages.celebration }
         ]
     },
     {

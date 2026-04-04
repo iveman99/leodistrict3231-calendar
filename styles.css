@@ -242,7 +242,7 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
-    transform: scale(0.85) translateY(-5%);
+    transform: scale(0.78) translateY(-4%);
     transition: transform 0.3s;
 }
 
@@ -609,10 +609,10 @@ body {
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 15px;
-    width: 90%;
-    max-width: 1100px;
-    margin: 100px auto;
+    gap: 6px;
+    width: 95%;
+    max-width: 800px;
+    margin: 100px auto 20px;
     perspective: 1000px;
 }
 
@@ -628,11 +628,11 @@ body {
 }
 
 .grid-day {
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.25 / 1;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 12px;
+    border-radius: 12px;
+    padding: 8px;
     position: relative;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
@@ -649,7 +649,7 @@ body {
 .grid-day .day-number {
     font-family: var(--font-head);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.3);
     transition: color 0.3s;
 }
@@ -660,7 +660,7 @@ body {
     border: 1px solid var(--month-glow);
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    transform: scale(1.1) translateZ(20px);
+    transform: scale(1.05) translateZ(20px);
     z-index: 5;
     animation: pulseEvent 4s infinite alternate ease-in-out;
 }
@@ -673,21 +673,22 @@ body {
 
 .grid-day.has-event .day-number {
     color: var(--text-main);
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     font-weight: 900;
     line-height: 1;
 }
 
 .day-event-title {
     margin-top: auto;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--month-glow);
-    line-height: 1.2;
+    line-height: 1.1;
     overflow: hidden;
     display: -webkit-box;
+    line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
