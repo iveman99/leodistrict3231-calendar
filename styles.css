@@ -512,7 +512,7 @@ body {
 .modal-desc { font-size: 1.3rem; color: rgba(255,255,255,0.8); line-height: 1.6; font-weight: 300; margin-bottom: 0; }
 
 .modal-video-stagger {
-    flex: 1.2;
+    flex: 1;
     position: relative;
     border-radius: 20px;
     perspective: 1200px;
@@ -521,7 +521,7 @@ body {
 
 .video-glow {
     position: absolute;
-    inset: -30px;
+    inset: -10px;
     background: conic-gradient(from 0deg, var(--acc-pink), var(--acc-purple), var(--acc-blue), var(--acc-pink));
     filter: blur(50px);
     opacity: 0.15;
@@ -537,8 +537,11 @@ body {
 }
 
 .reveal-video {
+    display: block;
     width: 100%;
-    max-height: 450px;
+    max-width: 300px;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
     object-fit: cover;
     border-radius: 16px;
     transform: translateY(80px) translateZ(100px) rotateY(-10deg);
