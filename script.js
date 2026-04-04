@@ -16,7 +16,7 @@ const calendarData = [
         month: "June 2026",
         color: "#00C6FF",
         events: [
-            { type: 'primary', top: '45%', left: '52%', dateStr: "7", title: "PSTVP & GAT Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership },
+            { type: 'primary', top: '45%', left: '52%', dateStr: "7", title: "PSTVP & GAT Schooling", fullDate: "7th June 2026", desc: "A leadership learning experience to prepare clubs for the year ahead.", bg: bgImages.leadership, video: "Videos/Schooling.MOV" },
             { type: 'secondary', top: '25%', left: '30%', dateStr: "15", title: "Presidents' Meet", fullDate: "15th June 2026", desc: "A gathering for club presidents.", bg: bgImages.meeting },
             { type: 'secondary', top: '30%', left: '70%', dateStr: "28", title: "Preliminary Council Meet", fullDate: "28th June 2026", desc: "A strategic planning meet to align vision and execution.", bg: bgImages.meeting }
         ]
@@ -293,7 +293,7 @@ function renderMonthlyGrid(monthObj, container) {
             const safeDesc = evt.desc.replace(/'/g, "\\'");
             const safeBg = evt.bg.replace(/'/g, "\\'");
             
-            dayEl.onclick = () => openModal(evt.fullDate, evt.title, safeDesc, safeBg);
+            dayEl.onclick = () => openModal(evt.fullDate, evt.title, safeDesc, safeBg, evt.video);
             
             dayEl.innerHTML = `
                 <div class="day-number">${d}</div>
@@ -323,7 +323,7 @@ function renderHighlights(monthObj, container) {
         const safeDesc = evt.desc.replace(/'/g, "\\'");
         const safeBg = evt.bg.replace(/'/g, "\\'");
         
-        card.onclick = () => openModal(evt.range, evt.title, safeDesc, safeBg);
+        card.onclick = () => openModal(evt.range, evt.title, safeDesc, safeBg, evt.video);
         
         card.innerHTML = `
             <div class="highlight-range">${evt.range}</div>
@@ -363,7 +363,7 @@ function handlePrev() {
 }
 
 // === 5. MODAL LOGIC ===
-function openModal(date, title, desc, bg) {
+function openModal(date, title, desc, bg, videoUrl = null) {
     isModalOpen = true;
     document.querySelector('.scene-3d').classList.add('dimmed');
     
@@ -371,6 +371,17 @@ function openModal(date, title, desc, bg) {
     document.getElementById('modal-title').innerText = title;
     document.getElementById('modal-desc').innerText = desc;
     document.getElementById('modal-image').style.backgroundImage = `url('${bg}')`;
+    
+    const videoContainer = document.getElementById('video-stagger');
+    const videoEl = document.getElementById('modal-video');
+    
+    if (videoUrl) {
+        videoEl.src = videoUrl;
+        videoContainer.style.display = 'block';
+    } else {
+        videoEl.src = '';
+        videoContainer.style.display = 'none';
+    }
     
     document.getElementById('event-modal').classList.add('active');
     
@@ -382,6 +393,13 @@ function closeModal() {
     isModalOpen = false;
     document.querySelector('.scene-3d').classList.remove('dimmed');
     document.getElementById('event-modal').classList.remove('active');
+    
+    const videoEl = document.getElementById('modal-video');
+    if (videoEl) {
+        videoEl.pause();
+        videoEl.src = '';
+    }
+    
     document.removeEventListener('mousemove', modalParallax);
 }
 
