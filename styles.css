@@ -651,16 +651,19 @@ body {
         padding-right: 20px;
         justify-content: center;
     }
-    .modal-content {
-        padding: 3.5rem 2rem 2rem;
+    .modal-content, .modal-content.has-video {
+        padding: 3.5rem 1.5rem 1.5rem;
         border-radius: 20px;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 100%;
     }
     .mac-controls {
-        top: 20px;
-        left: 20px;
+        top: 16px;
+        left: 16px;
     }
-    .modal-title { font-size: 2.2rem; margin-bottom: 0.8rem; }
-    .modal-date { font-size: 1.1rem; }
+    .modal-title { font-size: 1.8rem; line-height: 1.1; margin-bottom: 0.8rem; word-break: break-word; }
+    .modal-date { font-size: 1rem; }
     .modal-desc { font-size: 1rem; line-height: 1.4; }
 }
 
