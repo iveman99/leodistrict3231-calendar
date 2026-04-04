@@ -374,13 +374,16 @@ function openModal(date, title, desc, bg, videoUrl = null) {
     
     const videoContainer = document.getElementById('video-stagger');
     const videoEl = document.getElementById('modal-video');
+    const modalContent = document.getElementById('modal-content');
     
     if (videoUrl) {
         videoEl.src = videoUrl;
         videoContainer.style.display = 'block';
+        modalContent.classList.add('has-video');
     } else {
         videoEl.src = '';
         videoContainer.style.display = 'none';
+        modalContent.classList.remove('has-video');
     }
     
     document.getElementById('event-modal').classList.add('active');
