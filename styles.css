@@ -469,6 +469,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
+    z-index: 100;
 }
 .close-modal:hover { background: var(--acc-pink); transform: rotate(90deg); }
 
@@ -542,10 +543,10 @@ body {
     border-radius: 16px;
     transform: translateY(80px) translateZ(100px) rotateY(-10deg);
     opacity: 0;
-    box-shadow: 20px 20px 60px rgba(0,0,0,0.6), -10px -10px 30px rgba(255,255,255,0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px var(--month-glow), 20px 20px 60px rgba(0,0,0,0.6);
+    border: 2px solid var(--month-glow);
     background-color: rgba(0,0,0,0.8);
-    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s, border-color 0.3s;
 }
 
 .fullscreen-modal.active .reveal-video {
@@ -559,8 +560,8 @@ body {
 
 .reveal-video:hover {
     transform: translateY(-5px) translateZ(80px) rotateY(0deg) scale(1.03) !important;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.8), 0 0 40px rgba(255,255,255,0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 40px var(--month-glow), 0 30px 80px rgba(0,0,0,0.8) !important;
+    border-color: #fff;
 }
 
 @media(max-width: 900px) {
